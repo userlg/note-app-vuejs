@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
     <title>Createapp</title>
   </head>
@@ -46,7 +46,8 @@
               </p>
             </div>
             <div
-              class="d-flex flex-column bg-white w-100 h-auto py-3 mx-auto border border-primary rounded shadow-sm"n
+              class="d-flex flex-column bg-white w-100 h-auto py-3 mx-auto border border-primary rounded shadow-sm"
+              n
             >
               <ul
                 class="list-group d-inline-flex w-100 mx-auto px-1"
@@ -63,11 +64,14 @@
                   ></li>
 
                   <li class="my-2 mx-0 btn-group btn-group-sm px-1">
-                    <button class="btn bg-info rounded" @click='editElement(index)' >
-                      <img  src="pencil.png" alt="" />
+                    <button
+                      class="btn bg-info rounded"
+                      @click="editElement(index)"
+                    >
+                      <img src="pencil.png" alt="" />
                     </button>
                     <button
-                      class="rounded btn bg-danger" 
+                      class="rounded btn bg-danger"
                       @click="removeElement(index)"
                     >
                       <img src="delete_4219.png" alt="" />

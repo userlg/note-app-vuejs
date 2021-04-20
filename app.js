@@ -3,10 +3,10 @@ var app = new Vue({
   data: {
     newElement: "",
     element: [
-      { tarea: "Hacer deporte", completed: true },
-      { tarea: "Cocinar la cena", completed: true },
-      { tarea: "Ver tv", completed: false },
-      { tarea: "Practicar Javascript", completed: true },
+      { tarea: "Make Sport", completed: true },
+      { tarea: "Cook the dinner", completed: true },
+      { tarea: "Watch tv", completed: false },
+      { tarea: "Writr Javascript code", completed: true },
     ],
   },
   methods: {
