@@ -1,22 +1,22 @@
-##Application TO-DO  by Userlg
+# Application TO-DO  by Userlg
 
 --------------------------------
 
-###Requires and Installation
+### Requires and Installation
 
-*Vuejs Cdn
+* Vuejs Cdn
 
-*JSPDF
+* JSPDF
 
-*Bootstrap
+* Bootstrap
 
-*Liver Server
+* Liver Server
 
 ---------------------
 
-Code for Show
+# Code for Show
 
-###App.js
+### App.js
 ~~~
 var app = new Vue({
   el: "#app",
@@ -32,7 +32,7 @@ var app = new Vue({
 
 ~~~
 
-###App.js - JSPDF
+### App.js - JSPDF
 
 ~~~
   exportPDF() {
@@ -50,10 +50,12 @@ var app = new Vue({
 
 --------------
 
-#Preview
+# Preview
 ![Capture App](Capture/Preview.png)
+******
 
-[repository][(https://github.com/userlg/)]
+## [Repository](https://github.com/userlg/)
+
 
 
           
