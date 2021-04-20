@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.13/jspdf.plugin.autotable.min.js"></script>
+    <title>Createapp</title>
+  </head>
+  <body>
+    <div
+      class="container border border-dark rounded shadow-sm animate__shakeX d-flex flex-column my-4 mx-auto bg-light-50 w-75 h-auto py-2 shadow-lg"
+    >
+      <div class="row">
+        <div class="col-12 col-sm-12 col-lg-8 mx-auto">
+          <div id="app" class="py-5 mx-auto">
+            <h2
+              class="animate__animated animate__headShake mx-auto text-center py-1"
+            >
+              Escribe <span v-text="newElement"></span>
+            </h2>
+
+            <div class="form-group">
+              <input
+                @keyup.enter="addElement"
+                class="bg-dark text-light input-group-sm w-75 text-center mx-auto form-control"
+                v-model="newElement"
+                type="text"
+                name=""
+              />
+              <p class="text-center my-4">
+                Introduzca una actividad a la agenda
+              </p>
+            </div>
+            <div
+              class="d-flex flex-column bg-white w-100 h-auto py-3 mx-auto border border-primary rounded shadow-sm"n
+            >
+              <ul
+                class="list-group d-inline-flex w-100 mx-auto px-1"
+                id="lista_elementos"
+                v-for="(elements,index) in element"
+                :key="index"
+              >
+                <div
+                  class="d-flex flex-row align-items-center justify-content-center"
+                >
+                  <li
+                    class="py-2 text-center px-auto list-group-item bg-light w-75 h-50 animate__animated animate__backInUp mx-2 my-2 alert-info"
+                    v-text="elements.tarea"
+                  ></li>
+
+                  <li class="my-2 mx-0 btn-group btn-group-sm px-1">
+                    <button class="btn bg-info rounded" @click='editElement(index)' >
+                      <img  src="pencil.png" alt="" />
+                    </button>
+                    <button
+                      class="rounded btn bg-danger" 
+                      @click="removeElement(index)"
+                    >
+                      <img src="delete_4219.png" alt="" />
+                    </button>
+                  </li>
+                </div>
+              </ul>
+
+              <button
+                class="btn btn-outline-primary my-3 w-50 mx-auto"
+                @click="exportPDF"
+              >
+                Generar PDF
+              </button>
+
+              <footer>
+                <div
+                  class="container w-50 rounded shadow bg-light text-center my-3 border border-dark"
+                >
+                  <span>Cantidad: {{ element.length }}</span>
+                </div>
+              </footer>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
