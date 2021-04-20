@@ -51,9 +51,9 @@ var app = new Vue({
 --------------
 
 #Preview
+![Capture App](Capture/Preview.png)
 
-
-[(https://github.com/userlg/)]
+[repository][(https://github.com/userlg/)]
 
 
           
